@@ -2,7 +2,7 @@ package readers
 
 import org.apache.poi.ss.usermodel.Row
 import com.anchor.model
-import com.anchor.model.{Id, HobbyType, HobbyFrequency, StatusType}
+import com.anchor.model.{HobbyType, HobbyFrequency, StatusType}
 import util.Utils._
 
 /**

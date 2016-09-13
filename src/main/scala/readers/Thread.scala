@@ -2,31 +2,31 @@ package readers
 
 import org.apache.poi.ss.usermodel.Row
 import com.anchor.model
-import com.anchor.model.BacklogItemType
+import com.anchor.model.StatusType
 import util.Utils._
 
 /**
-  * Created by mesfinmebrate on 05/09/2016.
+  * Created by mesfinmebrate on 13/09/2016.
   */
-object BacklogItem {
+object Thread {
 
   private object SheetColumns {
     val id = 1
-    val yearId = 2
+    val goalId = 2
     val summary = 3
     val description = 4
-    val typeOf = 5
+    val status = 5
   }
 
-  def apply(row: Row): model.BacklogItem = {
+  def apply(row: Row): model.Thread = {
     import SheetColumns._
 
-    model.BacklogItem(
+    model.Thread(
       id = getCellId(row, id),
-      yearId = getCellId(row, yearId),
+      goalId = getCellOption(row, goalId),
       summary = getCellString(row, summary),
       description = getCellString(row, description),
-      typeOf = BacklogItemType.withName(getCellString(row, typeOf))
+      status = StatusType.withName(getCellString(row, status))
     )
   }
 }

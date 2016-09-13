@@ -2,7 +2,7 @@ package readers
 
 import org.apache.poi.ss.usermodel.Row
 import com.anchor.model
-import com.anchor.model.{Id, GoalStatusType, GraduationType}
+import com.anchor.model.{GoalStatusType, GraduationType}
 import util.Utils._
 
 /**

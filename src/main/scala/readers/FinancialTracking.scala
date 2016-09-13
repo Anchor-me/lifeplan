@@ -2,7 +2,7 @@ package readers
 
 import org.apache.poi.ss.usermodel.Row
 import com.anchor.model
-import com.anchor.model.{Id, FinancialProgressType}
+import com.anchor.model.FinancialProgressType
 import util.Utils._
 
 /**

@@ -2,7 +2,7 @@ package readers
 
 import org.apache.poi.ss.usermodel.Row
 import com.anchor.model
-import com.anchor.model.{Id, LaserDonut}
+import com.anchor.model.{DonutType, StatusType}
 import util.Utils._
 
 /**
@@ -12,22 +12,27 @@ object LaserDonut {
 
   private object SheetColumns {
     val id = 1
-    val summary = 2
-    val description = 3
-    val goalId = 4
-    val status = 5
-    val milestone = 6
-    val order = 7
-    val typeOf = 8
+    val goalId = 2
+    val summary = 3
+    val description = 4
+    val milestone = 5
+    val typeOf = 6
+    val status = 7
+    val order = 8
+  }
+
+  def apply(row: Row): model.LaserDonut = {
+    import SheetColumns._
+
+    model.LaserDonut(
+      id = getCellId(row, id),
+      goalId = getCellId(row, goalId),
+      summary = getCellString(row, summary),
+      description = getCellString(row, description),
+      milestone = getCellString(row, milestone),
+      typeOf = DonutType.withName(getCellString(row, typeOf)),
+      status = StatusType.withName(getCellString(row, status)),
+      order = getCellInteger(row, order)
+    )
   }
 }
-
-/*
-* LaserDonut (id: Id,
-                       summary: String,
-                       description: String,
-                       goalId: Id,
-                       status: StatusType.Value,
-                       milestone: String,
-                       order: Int,
-                       typeOf: DonutType.Value)*/
