@@ -11,10 +11,10 @@ import util.Utils._
 object Timetable {
 
   private object SheetColumns {
-    val id = 1
-    val dayId = 2
-    val scheduledItems = 3
-    val typeOf = 4
+    val id = 0
+    val dayId = 1
+    val scheduledItems = 2
+    val typeOf = 3
   }
 
   def apply(row: Row): model.Timetable = {

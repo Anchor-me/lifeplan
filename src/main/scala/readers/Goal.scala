@@ -11,15 +11,15 @@ import util.Utils._
 object Goal {
 
   private object SheetColumns {
-    val id = 1
-    val themeId = 2
-    val backlogItems = 3
-    val summary = 4
-    val description = 5
-    val level = 6
-    val priority = 7
-    val status = 8
-    val graduation = 9
+    val id = 0
+    val themeId = 1
+    val backlogItems = 2
+    val summary = 3
+    val description = 4
+    val level = 5
+    val priority = 6
+    val status = 7
+    val graduation = 8
   }
 
   def apply(row: Row): model.Goal = {

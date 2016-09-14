@@ -11,12 +11,12 @@ import util.Utils._
 object Weave {
 
   private object SheetColumns {
-    val id = 1
-    val goalId = 2
-    val summary = 3
-    val description = 4
-    val typeOf = 5
-    val status = 6
+    val id = 0
+    val goalId = 1
+    val summary = 2
+    val description = 3
+    val typeOf = 4
+    val status = 5
   }
 
   def apply(row: Row): model.Weave = {

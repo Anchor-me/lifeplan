@@ -11,13 +11,13 @@ import util.Utils._
 object FinancialTracking {
 
   private object SheetColumns {
-    val id = 1
-    val dayId = 2
-    val currentAmount = 3
-    val goalAmount = 4
-    val paidIn = 5
-    val paidOut = 6
-    val progress = 7
+    val id = 0
+    val dayId = 1
+    val currentAmount = 2
+    val goalAmount = 3
+    val paidIn = 4
+    val paidOut = 5
+    val progress = 6
   }
 
   def apply(row: Row): model.FinancialTracking = {

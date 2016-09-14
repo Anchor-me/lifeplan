@@ -10,11 +10,11 @@ import util.Utils._
 object Year {
 
   private object SheetColumns {
-    val id = 1
-    val epochId = 2
-    val startDate = 3
-    val finishDate = 4
-    val threads = 5
+    val id = 0
+    val epochId = 1
+    val startDate = 2
+    val finishDate = 3
+    val threads = 4
   }
 
   def apply(row: Row): model.Year = {

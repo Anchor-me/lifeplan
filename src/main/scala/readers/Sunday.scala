@@ -10,11 +10,11 @@ import util.Utils._
 object Sunday {
 
   private object SheetColumns {
-    val id = 1
-    val weekId = 2
-    val date = 3
-    val threads = 4
-    val activeHobby = 5
+    val id = 0
+    val weekId = 1
+    val date = 2
+    val threads = 3
+    val activeHobby = 4
   }
 
   def apply(row: Row): model.Sunday = {

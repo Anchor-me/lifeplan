@@ -10,11 +10,11 @@ import util.Utils._
 object Receipt {
 
   private object SheetColumns {
-    val id = 1
-    val trackingId = 2
-    val purchasedItem = 3
-    val expenditure = 4
-    val nameOfEstablishment = 5
+    val id = 0
+    val trackingId = 1
+    val purchasedItem = 2
+    val expenditure = 3
+    val nameOfEstablishment = 4
   }
 
   def apply(row: Row): model.Receipt = {

@@ -11,11 +11,11 @@ import util.Utils._
 object BacklogItem {
 
   private object SheetColumns {
-    val id = 1
-    val yearId = 2
-    val summary = 3
-    val description = 4
-    val typeOf = 5
+    val id = 0
+    val yearId = 1
+    val summary = 2
+    val description = 3
+    val typeOf = 4
   }
 
   def apply(row: Row): model.BacklogItem = {

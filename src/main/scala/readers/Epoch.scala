@@ -11,8 +11,8 @@ import util.Utils._
 object Epoch {
 
   private object SheetColumns {
-    val id = 1,
-    val name = 2,
+    val id = 0
+    val name = 1
   }
 
   def apply(row: Row): model.Epoch = {

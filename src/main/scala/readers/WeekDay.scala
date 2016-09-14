@@ -10,12 +10,12 @@ import util.Utils._
 object WeekDay {
 
   private object SheetColumns {
-    val id = 1
-    val weekId = 2
-    val date = 3
-    val threads = 4
-    val weaves = 5
-    val portion = 6
+    val id = 0
+    val weekId = 1
+    val date = 2
+    val threads = 3
+    val weaves = 4
+    val portion = 5
   }
 
   def apply(row: Row): model.WeekDay = {

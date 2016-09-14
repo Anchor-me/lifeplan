@@ -29,7 +29,7 @@ object Utils {
   }
 
   def getCellArray(row: Row, position: Int): Seq[Id] = {
-    getCellString(row, position).split(", ").map(Id _)
+    getCellString(row, position).split(", ").map(Id.apply)
   }
 
   def getCellOption(row: Row, position: Int): Option[Id] = {

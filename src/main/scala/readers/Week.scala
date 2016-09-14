@@ -10,13 +10,13 @@ import util.Utils._
 object Week {
 
   private object SheetColumns {
-    val id = 1
-    val yearId = 2
-    val startDate = 3
-    val finishDate = 4
-    val threads = 5
-    val weaves = 6
-    val laserDonut = 7
+    val id = 0
+    val yearId = 1
+    val startDate = 2
+    val finishDate = 3
+    val threads = 4
+    val weaves = 5
+    val laserDonut = 6
   }
 
   def apply(row: Row): model.Week = {

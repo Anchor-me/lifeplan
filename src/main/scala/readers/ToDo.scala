@@ -11,11 +11,11 @@ import util.Utils._
 object ToDo {
 
   private object SheetColumns {
-    val id = 1
-    val portionId = 2
-    val description = 3
-    val order = 4
-    val status = 5
+    val id = 0
+    val portionId = 1
+    val description = 2
+    val order = 3
+    val status = 4
   }
 
   def apply(row: Row): model.ToDo = {

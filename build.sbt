@@ -1,4 +1,4 @@
-name := "runner"
+name := "controller"
 
 version := "1.0"
 

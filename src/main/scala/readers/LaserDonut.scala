@@ -11,14 +11,14 @@ import util.Utils._
 object LaserDonut {
 
   private object SheetColumns {
-    val id = 1
-    val goalId = 2
-    val summary = 3
-    val description = 4
-    val milestone = 5
-    val typeOf = 6
-    val status = 7
-    val order = 8
+    val id = 0
+    val goalId = 1
+    val summary = 2
+    val description = 3
+    val milestone = 4
+    val typeOf = 5
+    val status = 6
+    val order = 7
   }
 
   def apply(row: Row): model.LaserDonut = {
