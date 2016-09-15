@@ -25,5 +25,5 @@ object Main extends App {
   WorkbookLoader.loadHobbies.foreach(loadItem)
   WorkbookLoader.loadFinancialTracking.foreach(loadItem)
   WorkbookLoader.loadReceipts.foreach(loadItem)
-  WorkbookLoader.loadTimetables.foreach(loadItem)
+//  WorkbookLoader.loadTimetables.foreach(loadItem)
 }
