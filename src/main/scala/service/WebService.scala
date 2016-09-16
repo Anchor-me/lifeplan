@@ -26,14 +26,14 @@ object WebService {
 
   def queryName(item: Spoke): String = {
     item match {
-      case backlogItem: BacklogItem => "backlogItem"
-      case bufferBlock: BufferBlock => "bufferBlock"
-      case concreteBlock: ConcreteBlock => "concreteBlock"
+      case backlogItem: BacklogItem => "backlogitem"
+      case bufferBlock: BufferBlock => "bufferblock"
+      case concreteBlock: ConcreteBlock => "concreteblock"
       case epoch: Epoch => "epoch"
-      case financialTracking: FinancialTracking =>"financialTracking"
+      case financialTracking: FinancialTracking =>"financialtracking"
       case goal: Goal => "goal"
       case hobby: Hobby => "hobby"
-      case laserDonut: LaserDonut => "laserDonut"
+      case laserDonut: LaserDonut => "laserdonut"
       case portion: Portion => "portion"
       case receipt: Receipt => "receipt"
       case saturday: Saturday => "saturday"
@@ -44,7 +44,7 @@ object WebService {
       case todo: ToDo => "todo"
       case weave: Weave => "weave"
       case week: Week => "week"
-      case weekDay: WeekDay => "weekDay"
+      case weekDay: WeekDay => "weekday"
       case year: Year => "year"
     }
   }

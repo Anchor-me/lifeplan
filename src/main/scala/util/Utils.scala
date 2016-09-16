@@ -1,7 +1,9 @@
 package util
 
 import com.anchor.model.Id
-import org.apache.poi.ss.usermodel.Row
+import org.apache.poi.ss.usermodel.{Cell, Row, Sheet, Workbook}
+
+import scala.collection.JavaConversions._
 
 /**
   * Created by mesfinmebrate on 06/09/2016.
@@ -13,7 +15,10 @@ object Utils {
   }
 
   def getCellString(row: Row, position: Int): String = {
-    row.getCell(position).getStringCellValue
+    row.getCell(position) match {
+      case cell: Cell => cell.getStringCellValue
+      case null => ""
+    }
   }
 
   def getCellLong(row: Row, position: Int): Long = {
@@ -39,5 +44,13 @@ object Utils {
       case 0 => None
       case _ => Some(Id(value))
     }
+  }
+
+  def getSheetRows(workbook: Workbook, name: String): Seq[Row] = {
+    workbook.getSheet(name).rowIterator.toSeq.tail.filterNot(isEmpty)
+  }
+
+  def isEmpty(row: Row): Boolean = {
+    row.cellIterator.forall(cell => cell == null || cell.getStringCellValue.trim.isEmpty)
   }
 }
