@@ -7,6 +7,8 @@ import config.Config._
 import play.api.libs.ws.DefaultWSClientConfig
 import play.api.libs.ws.ning.{NingAsyncHttpClientConfigBuilder, NingWSClient}
 import play.api.libs.json.{JsValue, Json}
+import scala.concurrent.Await
+import scala.concurrent.duration._
 
 /**
   * Created by mesfinmebrate on 05/09/2016.
@@ -18,10 +20,12 @@ object WebService {
   val ws = new NingWSClient(builder.build)
 
   def loadItem(item: Spoke): Unit = {
-    ws.url(s"$address/${queryName(item)}/add")
+    val resultFuture = ws.url(s"$address/${queryName(item)}/add")
       .withHeaders("Accept" -> "application/json")
       .withHeaders("Content-Type" -> "application/json")
       .post(toJson(item))
+
+    Await.result(resultFuture, 30 seconds)
   }
 
   def queryName(item: Spoke): String = {
