@@ -13,6 +13,8 @@ object Epoch {
   private object SheetColumns {
     val id = 0
     val name = 1
+    val totem = 2
+    val question = 3
   }
 
   def apply(row: Row): model.Epoch = {
@@ -20,7 +22,9 @@ object Epoch {
 
     model.Epoch(
       id = getCellId(row, id),
-      name = getCellString(row, name)
+      name = getCellString(row, name),
+      totem = getCellString(row, totem),
+      question = getCellString(row, question)
     )
   }
 }
