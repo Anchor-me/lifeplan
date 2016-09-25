@@ -31,8 +31,6 @@ object WebService {
   def queryName(item: Spoke): String = {
     item match {
       case backlogItem: BacklogItem => "backlogitem"
-      case bufferBlock: BufferBlock => "bufferblock"
-      case concreteBlock: ConcreteBlock => "concreteblock"
       case epoch: Epoch => "epoch"
       case financialTracking: FinancialTracking =>"financialtracking"
       case goal: Goal => "goal"
@@ -40,15 +38,10 @@ object WebService {
       case laserDonut: LaserDonut => "laserdonut"
       case portion: Portion => "portion"
       case receipt: Receipt => "receipt"
-      case saturday: Saturday => "saturday"
-      case sunday: Sunday => "sunday"
       case theme: Theme => "theme"
       case thread: Thread => "thread"
-      case timetable: Timetable => "timetable"
       case todo: ToDo => "todo"
       case weave: Weave => "weave"
-      case week: Week => "week"
-      case weekDay: WeekDay => "weekday"
       case year: Year => "year"
     }
   }
@@ -56,8 +49,6 @@ object WebService {
   def toJson(item: Spoke): JsValue = {
     item match {
       case backlogItem: BacklogItem => Json.toJson(backlogItem)
-      case bufferBlock: BufferBlock => Json.toJson(bufferBlock)
-      case concreteBlock: ConcreteBlock => Json.toJson(concreteBlock)
       case epoch: Epoch => Json.toJson(epoch)
       case financialTracking: FinancialTracking => Json.toJson(financialTracking)
       case goal: Goal => Json.toJson(goal)
@@ -65,15 +56,10 @@ object WebService {
       case laserDonut: LaserDonut => Json.toJson(laserDonut)
       case portion: Portion => Json.toJson(portion)
       case receipt: Receipt => Json.toJson(receipt)
-      case saturday: Saturday => Json.toJson(saturday)
-      case sunday: Sunday => Json.toJson(sunday)
       case theme: Theme => Json.toJson(theme)
       case thread: Thread => Json.toJson(thread)
-      case timetable: Timetable => Json.toJson(timetable)
       case todo: ToDo => Json.toJson(todo)
       case weave: Weave => Json.toJson(weave)
-      case week: Week => Json.toJson(week)
-      case weekDay: WeekDay => Json.toJson(weekDay)
       case year: Year => Json.toJson(year)
     }
   }

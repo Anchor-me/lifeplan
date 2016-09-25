@@ -23,9 +23,8 @@ object Year {
     model.Year(
       id = getCellId(row, id),
       epochId = getCellId(row, epochId),
-      startDate = getCellLong(row, startDate),
-      finishDate = getCellLong(row, finishDate),
-      threads = getCellArray(row, threads)
+      startDate = getCellDate(row, startDate),
+      finishDate = getCellDate(row, finishDate)
     )
   }
 }

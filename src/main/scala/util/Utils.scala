@@ -1,6 +1,6 @@
 package util
 
-import com.anchor.model.Id
+import com.anchor.model.{Id, DateTime}
 import org.apache.poi.ss.usermodel.{Cell, Row, Sheet, Workbook}
 
 import scala.collection.JavaConversions._
@@ -19,6 +19,10 @@ object Utils {
       case cell: Cell => cell.getStringCellValue
       case null => ""
     }
+  }
+
+  def getCellDate(row: Row, position: Int): DateTime = {
+    DateTime.fromString(getCellString(row, position))
   }
 
   def getCellLong(row: Row, position: Int): Long = {

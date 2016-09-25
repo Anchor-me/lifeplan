@@ -37,7 +37,7 @@ object WorkbookLoader {
 
   import Sheets._
 
-  val spreadsheet = new File(getClass.getClassLoader.getResource("Life management.xlsx").toURI)
+  val spreadsheet = new File(getClass.getClassLoader.getResource("Life management 2.xlsx").toURI)
   val workbook = WorkbookFactory.create(spreadsheet)
 
   def loadBacklogItems: Seq[model.BacklogItem] = {
@@ -80,16 +80,6 @@ object WorkbookLoader {
     getSheetRows(workbook, receipts).map(Receipt.apply)
   }
 
-  def loadSaturdays: Seq[model.Saturday] = {
-    println("loading saturdays")
-    getSheetRows(workbook, saturdays).map(Saturday.apply)
-  }
-
-  def loadSundays: Seq[model.Sunday] = {
-    println("loading sundays")
-    getSheetRows(workbook, sundays).map(Sunday.apply)
-  }
-
   def loadThemes: Seq[model.Theme] = {
     println("loading backlog items")
     getSheetRows(workbook, themes).map(Theme.apply)
@@ -100,11 +90,6 @@ object WorkbookLoader {
     getSheetRows(workbook, threads).map(Thread.apply)
   }
 
-  def loadTimetables: Seq[model.Timetable] = {
-    println("loading timetables")
-    getSheetRows(workbook, timetable).map(Timetable.apply)
-  }
-
   def loadToDos: Seq[model.ToDo] = {
     println("loading todos")
     getSheetRows(workbook, todos).map(ToDo.apply)
@@ -113,16 +98,6 @@ object WorkbookLoader {
   def loadWeaves: Seq[model.Weave] = {
     println("loading weaves")
     getSheetRows(workbook, weaves).map(Weave.apply)
-  }
-
-  def loadWeeks: Seq[model.Week] = {
-    println("loading weeks")
-    getSheetRows(workbook, weeks).map(Week.apply)
-  }
-
-  def loadWeekDays: Seq[model.WeekDay] = {
-    println("loading week days")
-    getSheetRows(workbook, weekDays).map(WeekDay.apply)
   }
 
   def loadYears: Seq[model.Year] = {

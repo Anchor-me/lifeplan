@@ -10,10 +10,6 @@ object Main extends App {
 
   WorkbookLoader.loadEpochs.foreach(loadItem)
   WorkbookLoader.loadYears.foreach(loadItem)
-  WorkbookLoader.loadWeeks.foreach(loadItem)
-  WorkbookLoader.loadWeekDays.foreach(loadItem)
-  WorkbookLoader.loadSaturdays.foreach(loadItem)
-  WorkbookLoader.loadSundays.foreach(loadItem)
   WorkbookLoader.loadBacklogItems.foreach(loadItem)
   WorkbookLoader.loadThemes.foreach(loadItem)
   WorkbookLoader.loadGoals.foreach(loadItem)
@@ -25,7 +21,4 @@ object Main extends App {
   WorkbookLoader.loadHobbies.foreach(loadItem)
   WorkbookLoader.loadFinancialTracking.foreach(loadItem)
   WorkbookLoader.loadReceipts.foreach(loadItem)
-
-
-//  WorkbookLoader.loadTimetables.foreach(loadItem)
 }
