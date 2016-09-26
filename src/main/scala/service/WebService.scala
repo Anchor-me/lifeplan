@@ -17,7 +17,15 @@ object WebService {
 
   val config = new NingAsyncHttpClientConfigBuilder(DefaultWSClientConfig()).build
   val builder = new AsyncHttpClientConfig.Builder(config)
-  val ws = new NingWSClient(builder.build)
+  var ws = new NingWSClient(builder.build)
+
+  def open: Unit = {
+    ws = new NingWSClient(builder.build)
+  }
+
+  def close: Unit = {
+    ws.close
+  }
 
   def loadItem(item: Spoke): Unit = {
     val resultFuture = ws.url(s"$address/${queryName(item)}/add")
