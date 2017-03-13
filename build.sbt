@@ -1,4 +1,4 @@
-name := "controller"
+name := "lifeplan"
 
 version := "1.0"
 
